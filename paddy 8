@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+	float mar[10][10],temp;
+	int i,j,m,n,col1,col2;
+	printf("Enter number of students and number of subjects:");
+	scanf("%d%d",&m,&n);
+	printf("Enter the marks of students:\n");
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			scanf("%f",&mar[i][j]);
+		}
+		printf("\n");
+	}
+	printf("Enter students coloums to be swapped:");
+	scanf("%d%d",&col1,&col2);
+	for(i=0;i<m;i++)
+	{
+		temp=mar[i][col1];
+		mar[i][col1]=mar[i][col2];
+		mar[i][col2]=temp;
+	}
+	printf("Marks after swapped is:\n");
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		{
+			printf("%.1f  ",mar[i][j]);
+		}
+		printf("\n");
+	}
+}
