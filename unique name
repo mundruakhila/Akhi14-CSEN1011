@@ -1,0 +1,30 @@
+#include<string.h>
+int main()
+{
+	char str[50][50],st[50];
+	int i,n,count,res;
+	scanf("%d\n",&n);
+	for(i=0;i<n;i++)
+	{
+		 scanf("%s",str[i]);
+	}
+	printf("Enter the name you searched:");
+	scanf("%s",st);
+	count=0;
+	for(i=0;i<n;i++)
+	{
+	    res=strcmp(str[i],st);
+	    if(res==0)
+	    {
+	    	count=count+1;
+		}
+	}
+	if(count==0)
+	{
+		printf("Unique Name");
+	}
+	else
+	{
+		printf("Common Name");
+	}
+}
